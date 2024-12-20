@@ -15,7 +15,11 @@ FetchContent_Declare(SFML
 FetchContent_MakeAvailable(SFML)
 
 # Define the executable
-add_executable(main src/main.cpp)
+add_executable(main src/main.cpp
+        include/gameWindow.h
+        src/gameWindow.cpp
+        include/game.h
+        src/game.cpp)
 target_link_libraries(main PRIVATE sfml-graphics)
 target_compile_features(main PRIVATE cxx_std_17)
 
